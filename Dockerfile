@@ -1,5 +1,5 @@
 FROM python:3-alpine3.13
-LABEL maintainer="muxriddin0623"
+LABEL maintainer="londonappdeveloper.com"
 
 ENV PYTHONUNBUFFERED 1
 
@@ -14,7 +14,7 @@ RUN python -m venv /py && \
     rm -rf /tmp && \
     adduser \
         --disabled-password \
-        --no-create-home\
+        --no-create-home \
         django-user
 
 ENV PATH="/py/bin:$PATH"
