@@ -15,7 +15,7 @@ services:
              python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
     environment:
-      - DB_HOST=db
+      - DB_HOST=localhost
       - DB_NAME=devdb
       - DB_USER=devuser
       - DB_PASS=changeme
@@ -30,6 +30,7 @@ services:
       - POSGRES_DB_=db
       - POSTGRES_USER=devuser
       - POSTGRES_PASSWORD=changeme
+      - POSTGRES_HOST_AUTH_METHOD=trust
 
 
 volumes:
