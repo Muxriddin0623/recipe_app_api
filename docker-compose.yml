@@ -14,24 +14,26 @@ services:
       sh -c "python manage.py test && flake8 &&
              python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
-    environment:
-      - DB_HOST=localhost
-      - DB_NAME=devdb
-      - DB_USER=devuser
-      - DB_PASS=changeme
-    depends_on:
-      - db
+#    environment:
+#      - DB_HOST=postgres
+#      - DB_NAME=devdb
+#      - DB_USER=devuser
+#      - DB_PASS=changeme
+#    depends_on:
+#      - postgres
 
-  db:
-    image: postgres:13-alpine
-    volumes:
-      - dev-db-data:/var/lib/postgresql/data
-    environment:
-      - POSGRES_DB_=db
-      - POSTGRES_USER=devuser
-      - POSTGRES_PASSWORD=changeme
-      - POSTGRES_HOST_AUTH_METHOD=trust
+#  postgres:
+#    image: postgres:13-alpine
+#    ports:
+#      - '5432:5432'
+#    volumes:
+#      - dev-postgres-data:/var/lib/postgresql/data
+#    environment:
+#      - POSGRES_DB_=postgres
+#      - POSTGRES_USER=devuser
+#      - POSTGRES_PASSWORD=changeme
+#      - POSTGRES_HOST_AUTH_METHOD=trust
 
 
-volumes:
-  dev-db-data:
+#volumes:
+#  dev-postgres-data:
