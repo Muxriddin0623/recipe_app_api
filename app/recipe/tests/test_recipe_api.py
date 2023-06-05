@@ -6,8 +6,10 @@ from django.urls import reverse
 
 from rest_framework import status
 from rest_framework.test import APIClient
-
-from core.models import Recipe,Tag
+from core.models import (
+    Recipe,
+    Tag,
+)
 
 from recipe.serializers import (
     RecipeSerializer,
@@ -236,7 +238,6 @@ class PrivateRecipeApiTests(TestCase):
                 user=self.user,
             ).exists()
             self.assertTrue(exists)
-
 
     def test_create_tag_on_update(self):
         """Test create tag when updating a recipe."""
