@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "<3.3,>=3.2.4"
+djangorestframework = "<3.13,>=3.12.4"
+flake8 = "<3.10,>=3.9.2"
+psycopg2 = "<2.9,>=2.8.6"
+drf-spectacular = ">=0.15,<=0.16"
+pillow = "<8.3.0,>=8.2.0"
+uwsgi = "<2.1,>=2.0.19"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
